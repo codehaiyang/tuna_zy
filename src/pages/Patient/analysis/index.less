@@ -1,0 +1,121 @@
+@import '~antd/es/style/themes/default.less';
+
+
+.analysis_thumbnail {
+  max-width: 468px;
+  margin: 0 auto;
+}
+
+
+.analysis_detail {
+  max-width: 86%;
+  margin: 24px auto;
+  //background-color: red;
+}
+
+.canvas_s{
+  width: 64%;
+  margin: 24px auto;
+
+
+}
+
+
+
+.test {
+  max-height: 80%;
+}
+
+
+.patientDesc {
+  padding-left: 10px;
+}
+
+
+.wrap_scrollImg {
+  max-width: calc(64%);
+  //width: 100%;
+  height: 220px;
+  //background-color: #2C9806;
+  overflow: hidden;
+  position: relative;
+  margin: 12px auto;
+
+  &:hover {
+    span {
+      display: inline-block;
+    }
+  }
+
+  span {
+    cursor: pointer;
+    z-index: 11;
+    position: absolute;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 35px;
+    line-height: 35px;
+    width: 68px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    transition: 0.2s;
+
+    &:hover {
+      font-size: 22px;
+    }
+  }
+
+  .left_icon {
+    left: 0;
+  }
+
+  .right_icon {
+    right: 0;
+  }
+
+
+  ul {
+    z-index: 10;
+    height: inherit;
+    white-space: nowrap;
+    position: absolute;
+    transition: all 0.5s ease-in 0s; //偏移的过度效果
+    margin-right: -1%; //设置ul偏右-用来抵消li元素右边距1%导致的缺口
+
+    li {
+      height: 76%;
+      display: inline-block;
+      min-width: calc(24%);
+      width: calc(24%);
+      margin-right: 1%; //图片右边距
+      overflow: hidden;
+      border-radius: 6px;
+      cursor: pointer;
+
+      canvas {
+        transition: all 0.3s;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+
+      }
+    }
+  }
+
+  .showBorder {
+    border: 1px solid rgb(220, 220, 220);
+  }
+
+  .ThumbnailDescription{
+    font-size: 12px;
+  }
+}
+

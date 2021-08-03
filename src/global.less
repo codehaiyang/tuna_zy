@@ -1,0 +1,102 @@
+@import '~antd/es/style/themes/default.less';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// 兼容IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
+
+
+.ant-pro-sider-logo h1 {
+  font-size: 14px;
+}
+
+
+/* 选择历史记录的文字颜色和背景颜色 */
+
+input:-webkit-autofill {
+
+  -webkit-animation: autofill-fix 1s infinite!important;
+
+  /* 选择历史记录的文字颜色*/
+
+  -webkit-text-fill-color: #666;
+
+  -webkit-transition: background-color 50000s ease-in-out 0s!important;
+
+  transition: background-color 50000s ease-in-out 0s!important;
+
+  background-color: transparent!important;
+
+  background-image: none !important;
+
+  /* 选择历史记录的背景颜色 */
+
+  -webkit-box-shadow: 0 0 0 1000px transparent inset!important;
+
+}
+
+[role=button], a, area, button, input:not([type=range]), label, select, summary, textarea {
+
+  -ms-touch-action: manipulation;
+
+  touch-action: manipulation;
+
+}
+
+input[type=number], input[type=password], input[type=text], textarea {
+
+  -webkit-appearance: none;
+
+}

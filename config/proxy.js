@@ -6,32 +6,32 @@
  * https://pro.ant.design/docs/deploy
  */
 export default {
-    dev: {
-        '/api/': {
-            // target: 'https://preview.pro.ant.design',
-            target: 'http://192.168.0.43/isvapi/service/v1',
-            changeOrigin: true,
-            pathRewrite: {
-                '^/api/': '',
-            },
-        },
+  dev: {
+    '/api/': {
+      // target: 'https://preview.pro.ant.design',
+      target:'http://192.168.226.139/isvapi/service/v1',
+      changeOrigin: true,
+      pathRewrite: {
+        '^/api/': '',
+      },
     },
-    test: {
-        '/api/': {
-            target: 'https://preview.pro.ant.design',
-            changeOrigin: true,
-            pathRewrite: {
-                '^': '',
-            },
-        },
+  },
+  test: {
+    '/api/': {
+      target: 'https://preview.pro.ant.design',
+      changeOrigin: true,
+      pathRewrite: {
+        '^': '',
+      },
     },
-    pre: {
-        '/api/': {
-            target: 'your pre url',
-            changeOrigin: true,
-            pathRewrite: {
-                '^': '',
-            },
-        },
+  },
+  pre: {
+    '/api/': {
+      target: 'your pre url',
+      changeOrigin: true,
+      pathRewrite: {
+        '^': '',
+      },
     },
+  },
 };

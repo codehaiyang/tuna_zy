@@ -75,21 +75,21 @@ const Dashboard = (props) => {
 
 
   // 处理图像推送
-  // dicomQueue.forEach(item => {
-  //   item.retryList.forEach(cItem => {
-  //     if (cItem.statuscode !== 0) {
-  //       // setDicomCount(dicomCount + 1);
-  //       if ((new Date().getTime() - new Date(cItem.retryenddatetime).getTime()) < 1000 * 60 * 60 * 2) {
-  //         dicomCardInfo.FAILED += 1;
-  //       }
-  //       // retrystartdatetime
+  dicomQueue.forEach(item => {
+    item.retryList.forEach(cItem => {
+      if (cItem.statuscode !== 0) {
+        // setDicomCount(dicomCount + 1);
+        if ((new Date().getTime() - new Date(cItem.retryenddatetime).getTime()) < 1000 * 60 * 60 * 2) {
+          dicomCardInfo.FAILED += 1;
+        }
+        // retrystartdatetime
 
-  //     } else {
-  //       dicomCardInfo.SUCCESS += 1;
-  //     }
-  //   })
+      } else {
+        dicomCardInfo.SUCCESS += 1;
+      }
+    })
 
-  // });
+  });
 
   let dicomReceiveCardInfo = 0;
   // 处理图像接收

@@ -32,7 +32,7 @@ function DetailImages(props) {
             setTimeout(() => {
               if (document.getElementById(`${img}_${index}`)) {
                 const image = new Image();
-                image.src = `http://192.168.0.43${img}?m=${Math.random()}`;
+                image.src = `http://192.168.226.139${img}?m=${Math.random()}`;
                 image.onload = function () {
                   width = image.width;
                   height = image.height;
@@ -116,7 +116,7 @@ function ThumbnailImages(props) {
                 setTimeout(() => {
                   if (document.getElementById(item.Filenames[0])) {
                     const image = new Image();
-                    image.src = `http://192.168.0.43${item.ThumbnailFilenames[0]}?m=${Math.random()}`;
+                    image.src = `http://192.168.226.139${item.ThumbnailFilenames[0]}?m=${Math.random()}`;
                     image.onload = function () {// 图片加载完之后获取画布 进行绘制
                       const ctx = document.getElementById(item.Filenames[0]).getContext("2d");
                       ctx.drawImage(image, 0, 0, width, height, 0, 0, width, height);

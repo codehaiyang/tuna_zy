@@ -436,7 +436,7 @@ const CommonForm = () => (
   <PageContainer>
     <QueueAnim duration={500}>
       <Tabs defaultActiveKey="1" onChange={callback} key="moudelTabs" animated={true}>
-        <TabPane tab="ASPECTS" key="1">
+        <TabPane tab="CT设置" key="1">
           <Title level={3}>设置</Title>
           <Space style={{marginBottom: 16}}>
             <Button type="primary">修改</Button>
@@ -464,7 +464,7 @@ const CommonForm = () => (
             </Form>
           </div>
         </TabPane>
-        <TabPane tab="MISMATCH" key="2">
+        <TabPane tab="MISMATCH设置" key="2">
             <Title level={3}>设置</Title>
             <Space style={{marginBottom: 16}}>
               <Button>输入数据</Button>
@@ -476,7 +476,7 @@ const CommonForm = () => (
             <Divider></Divider>
             <MISMATCHForm></MISMATCHForm>
         </TabPane>
-        <TabPane tab="CTA" key="3">
+        <TabPane tab="CTA设置" key="3">
           <Title level={3}>设置</Title>
           <Space style={{marginBottom: 16}}>
             <Button type="primary">编辑</Button>
